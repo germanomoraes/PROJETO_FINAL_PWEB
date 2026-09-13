@@ -89,7 +89,6 @@ Durante o desenvolvimento e implantação, a ferramenta de Inteligência Artific
 * Instruções passo a passo para resolução de conflitos e merges de branches no GitHub Desktop.
 * Apoio na configuração do script de inicialização do banco de dados em produção.
 
-*Todas as sugestões foram analisadas, testadas manualmente em ambiente de homologação, validadas pelo desenvolvedor e compreendidas antes da entrega final.*
-> ** Aviso sobre o plano gratuito:** O serviço de hospedagem (Render) coloca a aplicação em "modo de espera" após 15 minutos sem uso. O primeiro acesso após esse período pode demorar até 50 segundos para carregar enquanto o servidor acorda.
+
 
 
