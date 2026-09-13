@@ -1,0 +1,41 @@
+services:
+  app:
+    build: .
+    container_name: consumo_agua_app
+    ports:
+      - "8000:8000"
+    environment:
+      - APP_ENV=local
+      - APP_DEBUG=true
+      - APP_URL=http://localhost:8000
+      - DB_CONNECTION=pgsql
+      - DB_HOST=db
+      - DB_PORT=5432
+      - DB_DATABASE=consumo_agua
+      - DB_USERNAME=postgres
+      - DB_PASSWORD=postgres
+      - PORT=8000
+    depends_on:
+      db:
+        condition: service_healthy
+    volumes:
+      - ./data/storage:/var/www/storage
+
+  db:
+    image: postgres:16-alpine
+    container_name: consumo_agua_db
+    environment:
+      - POSTGRES_DB=consumo_agua
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=postgres
+      - PGDATA=/var/lib/postgresql/data/pgdata
+    ports:
+      - "5432:5432"
+    volumes:
+      - ./data/postgres:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U postgres -d consumo_agua"]
+      interval: 3s
+      timeout: 3s
+      retries: 10
+      start_period: 5s

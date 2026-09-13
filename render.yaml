@@ -1,0 +1,46 @@
+# Blueprint opcional do Render (Infrastructure as Code).
+# Em vez de clicar em "New +" manualmente, você pode commitar este
+# arquivo na raiz do repositório e usar "New +" > "Blueprint" no Render.
+services:
+  - type: web
+    name: agua-evolucao
+    runtime: docker
+    plan: free
+    dockerfilePath: ./Dockerfile
+    envVars:
+      - key: APP_NAME
+        value: "Sistema de Controle de Consumo de Agua"
+      - key: APP_ENV
+        value: production
+      - key: APP_DEBUG
+        value: false
+      - key: APP_URL
+        sync: false
+      - key: APP_KEY
+        generateValue: true
+      - key: DB_CONNECTION
+        value: pgsql
+      - key: DB_HOST
+        fromDatabase:
+          name: agua-evolucao-db
+          property: host
+      - key: DB_PORT
+        fromDatabase:
+          name: agua-evolucao-db
+          property: port
+      - key: DB_DATABASE
+        fromDatabase:
+          name: agua-evolucao-db
+          property: database
+      - key: DB_USERNAME
+        fromDatabase:
+          name: agua-evolucao-db
+          property: user
+      - key: DB_PASSWORD
+        fromDatabase:
+          name: agua-evolucao-db
+          property: password
+
+databases:
+  - name: agua-evolucao-db
+    plan: free

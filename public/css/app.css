@@ -1,0 +1,38 @@
+body { font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; margin: 0; background: #f5f7fa; color: #1f2933; }
+nav { display: flex; gap: 1.25rem; padding: 1rem 1.5rem; background: #1c3faa; align-items: center; }
+nav a { color: #fff; text-decoration: none; font-weight: 500; font-size: 0.95rem; }
+nav a:hover { text-decoration: underline; }
+main { max-width: 960px; margin: 2rem auto; padding: 0 1rem; }
+.alert-success { background: #d1f7dc; color: #14532d; padding: .75rem 1rem; border-radius: .5rem; margin: 1rem auto; max-width: 960px; border: 1px solid #bbf7d0; }
+.alert-danger { background: #fde2e2; color: #7f1d1d; padding: .75rem 1rem; border-radius: .5rem; margin: 1rem auto; max-width: 960px; border: 1px solid #fecaca; }
+.cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; margin-top: 1.5rem; }
+.card { background: #fff; border-radius: .75rem; padding: 1.25rem; box-shadow: 0 1px 3px rgba(0,0,0,.08); }
+.card span { display: block; font-size: .85rem; color: #64748b; margin-bottom: .35rem; }
+.card strong { font-size: 1.4rem; }
+table { width: 100%; border-collapse: collapse; margin-top: 1rem; background: #fff; border-radius: .5rem; overflow: hidden; box-shadow: 0 1px 3px rgba(0,0,0,.06); }
+th, td { text-align: left; padding: .75rem 1rem; border-bottom: 1px solid #e2e8f0; }
+th { background: #f8fafc; font-weight: 600; color: #475569; font-size: .875rem; }
+tr:hover { background-color: #f8fafc; }
+.header-actions { display: flex; justify-content: space-between; align-items: center; margin-bottom: 1.5rem; }
+.header-actions h1 { margin: 0; }
+.btn { display: inline-block; padding: .5rem 1rem; border-radius: .375rem; text-decoration: none; font-size: .875rem; font-weight: 500; cursor: pointer; border: 1px solid transparent; transition: background .15s; }
+.btn-primary { background: #1c3faa; color: #fff; }
+.btn-primary:hover { background: #153288; color: #fff; }
+.btn-success { background: #16a34a; color: #fff; }
+.btn-success:hover { background: #15803d; color: #fff; }
+.btn-secondary { background: #e2e8f0; color: #334155; }
+.btn-secondary:hover { background: #cbd5e1; }
+.btn-sm { padding: .25rem .5rem; font-size: .8rem; }
+.btn-whatsapp { background: #25d366; color: #fff; font-weight: 600; }
+.btn-whatsapp:hover { background: #1ebc59; color: #fff; }
+.badge { display: inline-block; padding: .2rem .5rem; border-radius: .25rem; font-size: .75rem; font-weight: 600; text-transform: uppercase; }
+.badge-pago { background: #dcfce7; color: #166534; }
+.badge-pendente { background: #fef3c7; color: #92400e; }
+.form-box { background: #fff; padding: 1.5rem; border-radius: .75rem; box-shadow: 0 1px 3px rgba(0,0,0,.08); max-width: 500px; margin-top: 1rem; }
+.form-group { margin-bottom: 1rem; }
+.form-group label { display: block; font-weight: 500; font-size: .875rem; margin-bottom: .35rem; color: #334155; }
+.form-control { width: 100%; padding: .5rem .75rem; border: 1px solid #cbd5e1; border-radius: .375rem; font-size: .95rem; box-sizing: border-box; }
+.form-control:focus { outline: none; border-color: #1c3faa; box-shadow: 0 0 0 3px rgba(28,63,170,.15); }
+.filter-bar { background: #fff; padding: 1rem; border-radius: .5rem; margin-bottom: 1.25rem; display: flex; gap: 1rem; align-items: flex-end; box-shadow: 0 1px 3px rgba(0,0,0,.06); }
+.filter-bar .form-group { margin-bottom: 0; }
+.pagination { margin-top: 1.25rem; display: flex; gap: .5rem; }
