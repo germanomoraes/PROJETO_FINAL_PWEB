@@ -59,8 +59,9 @@ php artisan key:generate
 touch database/database.sqlite
 php artisan migrate --seed
 php artisan serve
+```
 
-A aplicação estará disponível em `http://localhost:8000`.
+## A aplicação estará disponível em `http://localhost:8000`.
 
 ## Configuração do banco de dados
 O projeto utiliza **SQLite** por padrão (`DB_CONNECTION=sqlite`), dispensando a instalação de servidores externos (como MySQL ou PostgreSQL). O banco é gerado no arquivo local `database/database.sqlite` e as credenciais iniciais são populadas pelo comando `--seed`.
@@ -89,7 +90,6 @@ Durante o desenvolvimento e implantação, a ferramenta de Inteligência Artific
 * Apoio na configuração do script de inicialização do banco de dados em produção.
 
 *Todas as sugestões foram analisadas, testadas manualmente em ambiente de homologação, validadas pelo desenvolvedor e compreendidas antes da entrega final.*
-
 > ** Aviso sobre o plano gratuito:** O serviço de hospedagem (Render) coloca a aplicação em "modo de espera" após 15 minutos sem uso. O primeiro acesso após esse período pode demorar até 50 segundos para carregar enquanto o servidor acorda.
 
 
